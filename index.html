@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: cursive;
+      background: #dbe2e9; /* azul grisáceo medio blanco */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mensaje {
+      background: #fdf5d3; /* tono amarillento envejecido */
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+      font-size: 18px;
+      z-index: 2;
+      font-style: italic;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      border: 2px solid #d1a85c;
+      background-image: radial-gradient(circle at top left, rgba(255,255,255,0.5), transparent),
+                        radial-gradient(circle at bottom right, rgba(0,0,0,0.2), transparent);
+    }
+
+    .corazon {
+      position: absolute;
+      font-size: 24px;
+      animation: flotar 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes flotar {
+      from { transform: translateY(100vh) scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      to { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mensaje">
+    <p>¡Feliz cumpleaños, amor!</p>
+    <p>Primero que nada, como no sé cuándo leerás esto: buenos días, buenas tardes y buenas noches.<br>
+    Ahora te mostraré una primera parte de tu regalo; pero como nada es gratis en esta vida y sé que a vos te gusta descifrar cosas, primero tendrás que descifrar y resolver el acertijo.</p>
+    <p>"Cifrado César (+1)"<br>
+    ¿Rvf te ibdfb nát hsbñef njfñusbt nát mf rvjubt?<br>
+    Qjtub:ft mp rvf ibdft fñ nj dpsbapñ dvbñep ñp ftubt<br>
+    Qsfnjp:vñf upsub ef dipdpmbuf.</p>
+  </div>
+
+  <script>
+    const colores = ["❤️", "💙", "🤍"];
+    const cantidad = 40;
+    for (let i = 0; i < cantidad; i++) {
+      const corazon = document.createElement("div");
+      corazon.className = "corazon";
+      corazon.innerText = colores[Math.floor(Math.random() * colores.length)];
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.animationDuration = (6 + Math.random() * 6) + "s";
+      corazon.style.fontSize = (16 + Math.random() * 30) + "px";
+      document.body.appendChild(corazon);
+    }
+  </script>
+</body>
+</html>
