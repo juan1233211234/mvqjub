@@ -2,73 +2,138 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Cumpleaños Amor</title>
+  <title>Tu segundo regalo amor</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: cursive;
-      background: #dbe2e9; /* azul grisáceo medio blanco */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .mensaje {
-      background: #fdf5d3; /* tono amarillento envejecido */
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
-      text-align: center;
-      font-size: 18px;
-      z-index: 2;
+      min-height: 100vh;
+      background: #a4b0be; /* azul medio grisáceo */
+      font-family: 'Georgia', serif;
       font-style: italic;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      border: 2px solid #d1a85c;
-      background-image: radial-gradient(circle at top left, rgba(255,255,255,0.5), transparent),
-                        radial-gradient(circle at bottom right, rgba(0,0,0,0.2), transparent);
+      font-size: 20px;
     }
-
-    .corazon {
-      position: absolute;
-      font-size: 24px;
-      animation: flotar 10s linear infinite;
-      opacity: 0.8;
+    .carta {
+      background: #fdf6e3; /* hoja amarillenta */
+      padding: 40px;
+      max-width: 900px;
+      line-height: 2;
+      border-radius: 12px;
+      position: relative;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      transform: rotate(-0.5deg);
+      z-index: 2;
     }
-
-    @keyframes flotar {
-      from { transform: translateY(100vh) scale(1); opacity: 0; }
-      50% { opacity: 1; }
-      to { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+    h1 {
+      text-align: center;
+      font-size: 3em;
+    }
+    .triangulo {
+      margin: 20px 0;
+      text-align: center;
+    }
+    canvas {
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 6px;
+    }
+    .respuesta {
+      margin-top: 20px;
+      text-align: center;
+    }
+    input, button {
+      font-size: 20px;
+    }
+    .morse {
+      font-style: normal;
+      font-family: monospace;
+      background: rgba(0,0,0,0.05);
+      padding: 6px;
+      border-radius: 4px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="mensaje">
-    <p>¡Feliz cumpleaños, amor!</p>
-    <p>Primero que nada, como no sé cuándo leerás esto: buenos días, buenas tardes y buenas noches.<br>
-    Ahora te mostraré una primera parte de tu regalo; pero como nada es gratis en esta vida y sé que a vos te gusta descifrar cosas, primero tendrás que descifrar y resolver el acertijo.</p>
-    <p>"Cifrado César (+1)"<br>
-    ¿Rvf te ibdfb nát hsbñef njfñusbt nát mf rvjubt?<br>
-    Qjtub:ft mp rvf ibdft fñ nj dpsbapñ dvbñep ñp ftubt<br>
-    Qsfnjp:vñf upsub ef dipdpmbuf.</p>
+  <div class="carta" id="carta">
+    <h1>Tu segundo regalo amor</h1>
+    <p>
+      ¡Hola amor!<br>
+      Espero que estés bien despierta y se vaya el efecto Emma, así podés resolver esto bien. Decifrá el código y terminá la cuenta:
+    </p>
+
+    <p class="morse">
+      -•••/••- /•••/-.-./.- // . .-.. // ...- .- .-.. --- .-. // -.. . // .-.. .- // .... .. .--. --- - . -. ..- ... .- // . -. // . ... - . // -.-. .- ... --- // .-.. ..- . --. --- // -.-. --- -. // . ... . // ...- .- .-.. --- .-. // - . -. -.. .-. .- ... // --.- ..- . // .... .- -.-. . .-. // .-.. .- // ... .. --. ..- .. . -. - . // . -.-. ..- .- -.-. .. --- - ///
+    </p>
+
+    <p class="morse">
+      · .-.. // ...- .- .-.. --- .-. // -.. . // .-.. .- // .... .. .--. --- - . -. ..- ... .- // . ... // .. --. ..- .- .-.. // .- // -..- --..-- // .-. . ... --- .-.. ...- . // .-.. .- // . --.-. ..- .- -.-. .. --- -. // -.-- // . ... . // -. ..- -- . .-. --- // .. -. ... . .-. - .- .-.. --- // .- --.- ..- .. --..--
+    </p>
+
+    <p>
+      <strong>El valor de la hipotenusa es igual a X, resolvé la ecuación usando ese mismo valor de X:</strong><br>
+      3X²-6X+8=√5X+6-7X³ ///
+    </p>
+
+    <p>
+      (/=Espacios entre letras)<br>
+      (//=Espacios entre palabras)<br>
+      (///=Final)
+    </p>
+
+    <h2>Abecedario Morse</h2>
+    <p>
+      A = ·- &nbsp; B = -··· &nbsp; C = -·-· &nbsp; D = -·· &nbsp; E = · &nbsp; F = ··-· &nbsp; G = --· &nbsp; H = ···· &nbsp; I = ·· &nbsp; J = ·---<br>
+      K = -·- &nbsp; L = ·-·· &nbsp; M = -- &nbsp; N = -· &nbsp; O = --- &nbsp; P = ·--· &nbsp; Q = --·- &nbsp; R = ·-· &nbsp; S = ··· &nbsp; T = -<br>
+      U = ··- &nbsp; V = ···- &nbsp; W = ·-- &nbsp; X = -··- &nbsp; Y = -·-- &nbsp; Z = --··
+    </p>
+
+    <div class="triangulo">
+      <h2>Triángulo rectángulo</h2>
+      <canvas id="canvas" width="300" height="200"></canvas>
+    </div>
+
+    <div class="respuesta">
+      <p>Escribí aquí tu respuesta:</p>
+      <input type="number" id="respuestaInput">
+      <button onclick="verificar()">Verificar</button>
+      <div class="mensaje" id="mensaje"></div>
+    </div>
+
   </div>
 
   <script>
-    const colores = ["❤️", "💙", "🤍"];
-    const cantidad = 40;
-    for (let i = 0; i < cantidad; i++) {
-      const corazon = document.createElement("div");
-      corazon.className = "corazon";
-      corazon.innerText = colores[Math.floor(Math.random() * colores.length)];
-      corazon.style.left = Math.random() * 100 + "vw";
-      corazon.style.animationDuration = (6 + Math.random() * 6) + "s";
-      corazon.style.fontSize = (16 + Math.random() * 30) + "px";
-      document.body.appendChild(corazon);
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.moveTo(50, 150);
+    ctx.lineTo(200, 150);
+    ctx.lineTo(50, 50);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fillText("A = 7 cm", 25, 100);
+    ctx.fillText("B = 9 cm", 120, 165);
+    ctx.fillText("C = ?", 130, 100);
+
+    function verificar() {
+      const input = document.getElementById("respuestaInput").value;
+      const mensaje = document.getElementById("mensaje");
+      let hipotenusa = Math.sqrt(7*7 + 9*9);
+      hipotenusa = Math.round(hipotenusa * 10) / 10;
+      const X = hipotenusa;
+      const izquierda = 3*X*X - 6*X + 8;
+      const derecha = Math.sqrt(5*X + 6) - 7*X*X*X;
+      const resultadoCorrecto = Math.round((izquierda - derecha) * 100) / 100;
+      if (Math.abs(input - resultadoCorrecto) < 0.1) {
+        mensaje.textContent = "¡Felicidades mi amor, tu premio será una comida de tu gusto!";
+        mensaje.style.color = "black";
+      } else {
+        mensaje.textContent = "Respuesta incorrecta, volvé a intentarlo.";
+        mensaje.style.color = "black";
+      }
     }
   </script>
 </body>
